@@ -4,7 +4,7 @@
 
 Este Skeleton está usando [Yarn][Yarn] como manejador de paquetes y [Gulp][Gulp] como gestor de tareas
 
-> Se esta usando Yarn como gestor de dependencias por la velocidad y manejo de modulos offline(cache) a comparacion de Npm. #[br]
+> Se esta usando Yarn como gestor de dependencias por la velocidad y manejo de modulos offline(cache) a comparacion de Npm.
 
 ### Dependencias
 * Pug
