@@ -8,7 +8,7 @@
   },
   "author": "Javier Castro",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "browser-sync": "^2.16.0",
     "event-stream": "^3.3.4",
     "gulp": "^3.9.1",

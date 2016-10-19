@@ -1,10 +1,10 @@
 # Skeleton LandingPage
 
-[![N|Solid](http://www.i-programmer.info/images/stories/News/2016/Oct/A/yarnicon.jpg)](https://yarnpkg.com/) 
+[![N|Solid](http://www.i-programmer.info/images/stories/News/2016/Oct/A/yarnicon.jpg)](https://yarnpkg.com/)
 
 Este Skeleton está usando [Yarn][Yarn] como manejador de paquetes y [Gulp][Gulp] como gestor de tareas
 
-> Se esta usando Yarn como gestor de dependencias por la velocidad y manejo de modulos offline(cache) a comparacion de Npm. #[br]
+> Se esta usando Yarn como gestor de dependencias por la velocidad y manejo de modulos offline(cache) a comparacion de Npm.
 
 ### Dependencias
 * Pug
@@ -34,6 +34,13 @@ $ yarn add [package]
 $ yarn remove [package]
 $ yarn add [package] --dev
 ```
+**Para pasasr a produccion usar la variable de entorno --env=pro**
+
+```sh
+$ gulp --env=pro
+```
+
+> Se puede trabajar con **npm-instal** de la manera normal, pero, es algo lento =D
 
 Para mayor detalle verificar `package.json` y `gulpfile.js` para saber las tareas existentes.
 
@@ -42,6 +49,7 @@ Para mayor detalle verificar `package.json` y `gulpfile.js` para saber las tarea
 ```sh
 http://localhost:3030
 ```
+
 
 
 License
@@ -62,4 +70,3 @@ MIT
    [owl]: <http://owlgraphic.com/owlcarousel/>
    [jvalidate]: <https://jqueryvalidation.org/>
    [alphanum]: <http://github.com/KevinSheedy/jquery.alphanum>
-

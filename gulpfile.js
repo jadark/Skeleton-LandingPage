@@ -14,23 +14,19 @@ var gulp        = require('gulp'),
     prefix      = require('gulp-autoprefixer'),
     gutil       = require('gulp-util'),
     sourcemaps  = require('gulp-sourcemaps'),
-    directorio  = gutil.env.dir || "";
+    entorno  = gutil.env.env === 'prod';
 
 gulp.task('clear', function (done) {
   cache.clearAll(done);
 });
 
-gulp.task('js', ['clear'], function() {
+gulp.task('javascript', ['clear'], function() {
   es.merge(
     gulp.src('source/coffee/*.coffee')
         .pipe(plumber())
         .pipe(coffee({bare: true})),
     gulp.src('source/coffee/*.js'))
-        .pipe(uglify({
-          compress:{
-            drop_console: false
-          }
-         }))
+        .pipe( entorno ? uglify({compress:{drop_console: true}}) : gutil.noop())
         .pipe(concat('app.js'))
         .pipe( gulp.dest('dist/js/'))
         .pipe(browserSync.reload({stream: true}));
@@ -40,11 +36,7 @@ gulp.task('coffee', ['clear'], function(){
   gulp.src('source/coffee/*.coffee')
       .pipe(plumber())
       .pipe(coffee({bare: true}))
-      .pipe(uglify({
-        compress:{
-          drop_console: false
-        }
-       }))
+      .pipe( entorno ? uglify({compress:{drop_console: true}}) : gutil.noop())
       .pipe(gulp.dest('./dist/js/'))
       .pipe(browserSync.reload({stream: true}));
 });
@@ -53,10 +45,8 @@ gulp.task('sass', ['clear'], function () {
   gulp.src('./source/sass/*.scss')
       .pipe(plumber())
       //.pipe(sourcemaps.init())
-      .pipe(sass({
-        //CSS Minificado
-          // outputStyle:'compressed',
-        }))
+      .pipe(sass())
+      .pipe( entorno ? sass({outputStyle:'compressed'}) : gutil.noop())
       .pipe(prefix({browsers: ['last 2 versions', 'ie 8', 'ie 9', '> 1%', 'Firefox >= 20', 'Opera 12.1','iOS 7'], cascade: false}))
       .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest('./dist/css'))
@@ -94,7 +84,7 @@ gulp.task('plugins', function() {
 });
 
 // Static server
-gulp.task('serve', ['templates', 'sass', 'js'],function() {
+gulp.task('serve', ['templates', 'sass', 'javascript'],function() {
   browserSync.init({
     open: false,
     server: './dist',
