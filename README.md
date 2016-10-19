@@ -34,7 +34,7 @@ $ yarn add [package]
 $ yarn remove [package]
 $ yarn add [package] --dev
 ```
-**Para pasasr a produccion usar la variable de entorno --env=prod**
+**Para pasar a produccion usar la variable de entorno --env=prod**
 
 ```sh
 $ gulp --env=prod
