@@ -4,7 +4,7 @@
 
 Este Skeleton está usando [Yarn][Yarn] como manejador de paquetes y [Gulp][Gulp] como gestor de tareas
 
-> Se esta usando Yarn como gestor de dependencias por la velocidad y manejo de modulos offline(cache) a comparacion de Npm.
+> Se esta usando Yarn como gestor de dependencias por la velocidad y manejo de modulos offline(cache) a comparacion de Npm. #[br]
 
 ### Dependencias
 * Pug
@@ -25,15 +25,8 @@ Este Skeleton está usando [Yarn][Yarn] como manejador de paquetes y [Gulp][Gulp
 
 ### Instalacion
 
-Instalar [Yarn](https://nodejs.org/) de manera global
-
-```sh
-$ npm install -g yarn
-$ yarn
-$ gulp
-```
-Para los usuarios de **Windows** usar el
-[Instalador](https://yarnpkg.com/en/docs/install) oficial
+Instalar [Yarn](https://nodejs.org/) de manera global siguiendo los pasos del
+[Instalador](https://yarnpkg.com/en/docs/install) oficial para macOS, Windows, Linux
 
 **Para agregar o remover dependencias**
 ```sh
