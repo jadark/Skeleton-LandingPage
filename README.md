@@ -34,10 +34,10 @@ $ yarn add [package]
 $ yarn remove [package]
 $ yarn add [package] --dev
 ```
-**Para pasasr a produccion usar la variable de entorno --env=pro**
+**Para pasasr a produccion usar la variable de entorno --env=prod**
 
 ```sh
-$ gulp --env=pro
+$ gulp --env=prod
 ```
 
 > Se puede trabajar con **npm-instal** de la manera normal, pero, es algo lento =D
