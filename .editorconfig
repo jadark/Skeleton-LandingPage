@@ -1,0 +1,21 @@
+root = true
+
+[*]
+# change these settings to your preference
+indent_style = space
+indent_size = 2
+
+# recomend you to keep these unchaged
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+tab_width = 2
+max_line_length = 80
+
+[{*.js, *.jsx, *.css, *.scss, *.html, *.css}]
+indent_style = space
+indent_style = 2
+
+[*.md]
+trim_trailing_whitespace = false

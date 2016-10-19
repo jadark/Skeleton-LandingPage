@@ -1,0 +1,25 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,400italic);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css);
+@import "normalize";
+$font-family: 'cinzelregular',sans-serif;
+$font-familyBold: 'cinzelbold',sans-serif;
+$font-text:'Lato', sans-serif;
+$blue: #043d75;
+$blue-menu:#61adff;
+$text-color:#2a343d;
+$bar-width: 30px;
+$bar-height: 4px;
+$bar-spacing: 8px;
+
+
+html, body{
+  padding: 0;
+  font-family: $font-family;
+}
+body{
+   color:#686868;
+}
+*{
+  line-height: normal;
+}
